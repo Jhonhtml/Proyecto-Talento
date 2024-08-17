@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- CSS de Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Tu CSS personalizado -->
+    <link rel="stylesheet" href="Diseño-Contenido.css">
+
+        
+    <!-- JavaScript de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    
+
+    <style>
+        /* Estilos personalizados */
+        h1 {
+            color: rgb(255, 254, 254);
+            font-size: 45px;
+            background-image: url('https://gobiernodigital.mintic.gov.co/692/articles-76053_logo.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 180px;
+            height: 30px;
+            text-indent: -9999px;
+        }
+
+        .navbar-nav .nav-link {
+            color: #ffffff;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #cccccc;
+        }
+
+        .imagen-tech {
+            width: 100%;
+            height: 240px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .Carrusel {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carrusel-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .Carrusel {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .Carrusel {
+                height: 200px;
+            }
+        }
+
+        .container {
+            max-width: 100%; /* Ocupa todo el ancho disponible */
+        }
+    </style>
+    
+    <script src='main.js' defer></script>
+</head>
+
+<body class="p-3 m-0 border-0 bd-example">
+
+    <div class="cuerpo">
+        <div class="menu">
+            <nav class="navbar navbar-expand-lg" style="background-color:#003366;">
+                <h1 class="ms-5">Logo</h1>
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item me-5">
+                                <a class="nav-link" aria-current="page" href="admUsuarios.html">Administracion</a>
+                            </li>
+                            <li class="nav-item me-5">
+                                <a class="nav-link" aria-current="page" href="sesiones.html">Sesiones</a>
+                            </li>
+                            <li class="nav-item me-5">
+                                <a class="nav-link" href="calificaciones.html">Calificaciones</a>
+                            </li>
+                            <li class="nav-item me-5">
+                                <a class="nav-link" href="Principal.html">Principal</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="foro.html">Foro</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="me-5">
+                        <button type="button" class="btn btn-light" id="cerrar_sesion">Cerrar sesión</button>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <h2>Contenido</h2>
+        
+        <br>
+        <br>
+
+        <h3>Documentación</h3>
+        
+        <br>
+        <br>
+
+        <div class="containernav">
+            <div class="container mt-6">
+                <!-- Fila combinada para ambos conjuntos de Nav Tabs -->
+                <div class="row justify-content-center">
+                    <!-- Columna de Nav Tabs 1 -->
+                    <div class="col-md-5">
+                        <div class="d-flex">
+                            <!-- Primer conjunto de Nav Tabs -->
+                            <ul class="nav flex-column nav-pills me-3" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="html-tab" data-bs-toggle="tab" data-bs-target="#html" type="button" role="tab" aria-controls="html" aria-selected="true">HTML</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="css-tab" data-bs-toggle="tab" data-bs-target="#css" type="button" role="tab" aria-controls="css" aria-selected="false">CSS</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="js-tab" data-bs-toggle="tab" data-bs-target="#js" type="button" role="tab" aria-controls="js" aria-selected="false">JavaScript</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="python-tab" data-bs-toggle="tab" data-bs-target="#python" type="button" role="tab" aria-controls="python" aria-selected="false">Python</button>
+                                </li>
+                            </ul>
+                            <!-- Tab Content -->
+                            <div class="tab-content" id="myTabContent">
+                                <!-- Tab HTML -->
+                                <div class="tab-pane fade show active" id="html" role="tabpanel" aria-labelledby="html-tab">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <a href="path/to/html_.pdf" download>Introducción a HTML.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="path/to/html_template.html" download>Trabajando con enlaces y listas HTML.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="path/to/html_template.html" download>Imágenes y multimedia.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="path/to/html_template.html" download>Tablas y formularios.pdf</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Tab CSS -->
+                                <div class="tab-pane fade" id="css" role="tabpanel" aria-labelledby="css-tab">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <a href="path/to/css_guide.pdf" download>Introducción a CSS.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="path/to/styles.css" download>Colores y fondos.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="path/to/styles.css" download>Diseño responsivo CSS.pdf</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Tab JavaScript -->
+                                <div class="tab-pane fade" id="js" role="tabpanel" aria-labelledby="js-tab">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <a href="path/to/js_guide.pdf" download>Introducción a JavaScript.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="path/to/script.js" download>Variables y tipos de datos.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="path/to/script.js" download>Condicionales y bucles.pdf</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Tab Python -->
+                                <div class="tab-pane fade" id="python" role="tabpanel" aria-labelledby="python-tab">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <a href="path/to/python_guide.pdf" download>Introducción Python.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="path/to/python_script.py" download>Indentación y variables.pdf</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <!-- Columna de Nav Tabs 2 -->
+                    <div class="col-md-5 mt-3">
+                        <div class="d-flex">
+                            <!-- Segundo conjunto de Nav Tabs -->
+                            <ul class="nav flex-column nav-pills me-3" id="additionalTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="additional-tab1" data-bs-toggle="tab" data-bs-target="#additional1" type="button" role="tab" aria-controls="additional1" aria-selected="true">Recursos Adicionales</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="additional-tab2" data-bs-toggle="tab" data-bs-target="#additional2" type="button" role="tab" aria-controls="additional2" aria-selected="false">Guías de estudio</button>
+                                </li>
+                            </ul>
+                            <!-- Tab Content para Recursos Adicionales -->
+                            <div class="tab-content" id="additionalTabContent">
+                                <!-- Tab Recursos Adicionales -->
+                                <div class="tab-pane fade show active" id="additional1" role="tabpanel" aria-labelledby="additional-tab1">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <a href="path/to/resource1.pdf" download>Recurso Adicional 1.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="path/to/resource2.pdf" download>Recurso Adicional 2.pdf</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Tab Guías de estudio -->
+                                <div class="tab-pane fade" id="additional2" role="tabpanel" aria-labelledby="additional-tab2">
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <a href="path/to/study_guide1.pdf" download>Guía de Estudio 1.pdf</a>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <a href="path/to/study_guide2.pdf" download>Guía de Estudio 2.pdf</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div> 
+            </div> 
+        </div> 
+    </div>
+
+    <br>
+
+    <h3>Carga de archivos</h3>
+
+    <br>
+    <br>
+
+    <form action="/ejemplo-de-ruta" method="post" enctype="multipart/form-data">
+        <label for="archivo" class="btn-nuevo">Seleccionar archivo:</label>
+        <span id="nombre-archivo">Ningún archivo seleccionado</span>
+        <input type="file" id="archivo" name="archivo" class="btn-predeterminado">
+        <input type="submit" id="subir" value="Subir" class="btn-subir">
+    </form>
+
+    <br>
+    <br>
+
+    <script>
+
+        document.getElementById('archivo').addEventListener('change', function() {
+            var nombreArchivo = this.files[0] ? this.files[0].name : 'Ningún archivo seleccionado';
+            document.getElementById('nombre-archivo').textContent = nombreArchivo;
+        });
+
+        document.getElementById('subir').addEventListener('click', function(event) {
+            event.preventDefault(); // Evita el envío del formulario
+            var archivoInput = document.getElementById('archivo');
+            if (archivoInput.files.length > 0) {
+                alert("El archivo se subió correctamente");
+            } else {
+                alert("Ningún archivo se ha seleccionado.");
+            }
+        });
+    </script>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
+
